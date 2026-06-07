@@ -1,36 +1,38 @@
 // Download button functionality
-const downloadButtons = document.querySelectorAll('.download-btn');
+const playButtons = document.querySelectorAll('.play-btn');
 
-downloadButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const gameName = this.parentElement.querySelector('h2').textContent;
+playButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        const gameName = this.closest('.game-card').querySelector('h3').textContent;
         alert(`جاري تحميل: ${gameName}\nشكراً لاختيارك!`);
-        // في الواقع، يمكنك إضافة رابط التحميل الحقيقي هنا
     });
 });
 
-// Add smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth'
-            });
+// Smooth scroll for navigation
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
         }
     });
 });
 
-// Page load animation
+// Add animation on load
 window.addEventListener('load', function() {
     const cards = document.querySelectorAll('.game-card');
     cards.forEach((card, index) => {
-        card.style.animation = `fadeInUp 0.5s ease ${index * 0.1}s forwards`;
+        card.style.opacity = '0';
+        card.style.animation = `fadeInUp 0.6s ease ${index * 0.1}s forwards`;
     });
 });
 
-// CSS Animation for fade-in
+// Add fade-in animation
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInUp {
