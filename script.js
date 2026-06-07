@@ -136,7 +136,7 @@ function renderGames(gamesToRender = gamesData) {
                     <span class="stars">⭐⭐⭐⭐⭐</span>
                     <span class="rating-score">${game.rating}/5</span>
                 </div>
-                <button class="download-btn" onclick="openModal(${game.id})">تحميل</button>
+                <button class="download-btn" onclick="openModal(${game.id})">${currentLanguage === 'ar' ? 'تحميل' : 'Download'}</button>
             </div>
         `;
         gamesGrid.appendChild(gameCard);
@@ -164,10 +164,10 @@ function openModal(gameId) {
                 </div>
                 <div class="modal-buttons">
                     <a href="${game.iosLink}" target="_blank" class="ios-btn">
-                        <i class="fab fa-apple"></i> تحميل iOS
+                        <i class="fab fa-apple"></i> ${currentLanguage === 'ar' ? 'iPhone' : 'iPhone'}
                     </a>
                     <a href="${game.androidLink}" target="_blank" class="android-btn">
-                        <i class="fab fa-android"></i> تحميل Android
+                        <i class="fab fa-android"></i> ${currentLanguage === 'ar' ? 'Android' : 'Android'}
                     </a>
                 </div>
             </div>
@@ -221,6 +221,19 @@ function updateLanguage() {
     renderGames();
 }
 
+// Search Toggle
+document.getElementById('search-toggle').addEventListener('click', () => {
+    const searchContainer = document.getElementById('search-bar-container');
+    searchContainer.classList.toggle('active');
+    
+    if (searchContainer.classList.contains('active')) {
+        document.getElementById('search-input').focus();
+    } else {
+        document.getElementById('search-input').value = '';
+        renderGames();
+    }
+});
+
 // Search Functionality
 document.getElementById('search-input').addEventListener('input', (e) => {
     const searchTerm = e.target.value.toLowerCase();
@@ -238,7 +251,7 @@ document.getElementById('menu-btn').addEventListener('click', () => {
 });
 
 // Close menu when link is clicked
-document.querySelectorAll('.mobile-menu a').forEach(link => {
+document.querySelectorAll('.menu-item').forEach(link => {
     link.addEventListener('click', () => {
         document.getElementById('mobile-menu').classList.remove('active');
     });
