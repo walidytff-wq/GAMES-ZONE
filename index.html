@@ -3,189 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games Zone - أفضل الألعاب</title>
+    <title>Games Zone</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>🎮 GAMES ZONE</h1>
-            <p>أفضل الألعاب على الإطلاق</p>
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i>
+                <span id="logo-text">Games Zone</span>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="ابحث عن لعبة..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="header-actions">
+                <button class="lang-toggle" id="lang-btn">
+                    <span id="lang-text">EN</span>
+                </button>
+                
+                <a href="https://www.tiktok.com" target="_blank" class="tiktok-btn">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <button class="menu-toggle" id="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
     </header>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="#home">الرئيسية</a></li>
-                <li><a href="#games">الألعاب</a></li>
-                <li><a href="#about">حول</a></li>
-                <li><a href="#contact">تواصل</a></li>
-            </ul>
-        </div>
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobile-menu">
+        <ul>
+            <li><a href="#home" id="home-link">الرئيسية</a></li>
+            <li><a href="#about" id="about-link">حول</a></li>
+        </ul>
     </nav>
 
     <!-- Main Content -->
-    <main class="container">
-        <section id="games" class="games-section">
-            <h2>الألعاب المتاحة</h2>
-            <div class="games-grid">
-                
-                <!-- GTA V -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=GTA+V" alt="GTA V">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>GTA V</h3>
-                        <p>لعبة حركة وجريمة مثيرة من Rockstar Games مع عالم مفتوح ضخم.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.9</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Forza Horizon 5 -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=Forza+Horizon+5" alt="Forza Horizon 5">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>Forza Horizon 5</h3>
-                        <p>لعبة سباق مذهلة في المكسيك مع رسوميات خيالية.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.8</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Forza Horizon 6 -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=Forza+Horizon+6" alt="Forza Horizon 6">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>Forza Horizon 6</h3>
-                        <p>الإصدار الجديد من Forza مع بيئات مذهلة.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.9</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Red Dead Redemption 2 -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=RDR2" alt="Red Dead Redemption 2">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>Red Dead Redemption 2</h3>
-                        <p>ملحمة الغرب الأمريكي مع قصة درامية رائعة.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.9</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Fortnite -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=Fortnite" alt="Fortnite">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>Fortnite</h3>
-                        <p>لعبة حرب ملكية مثيرة مع بناء ديناميكي.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐</span>
-                            <span class="score">4.7</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Resident Evil 7 -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=Resident+Evil+7" alt="Resident Evil 7">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>Resident Evil 7</h3>
-                        <p>لعبة رعب مرعبة من منظور شخصي.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐</span>
-                            <span class="score">4.6</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- God of War Ragnarok -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=God+of+War" alt="God of War Ragnarok">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>God of War Ragnarok</h3>
-                        <p>ملحمة الإله كراتوس مع قتال مذهل.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.9</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Last of Us Part 2 -->
-                <div class="game-card">
-                    <div class="game-poster">
-                        <img src="https://via.placeholder.com/250x350/1a1a1a/c41e3a?text=The+Last+of+Us" alt="The Last of Us Part 2">
-                        <div class="game-overlay">
-                            <button class="play-btn">Download</button>
-                        </div>
-                    </div>
-                    <div class="game-details">
-                        <h3>The Last of Us Part 2</h3>
-                        <p>قصة إنسانية مؤثرة في عالم ما بعد الكارثة.</p>
-                        <div class="game-rating">
-                            <span class="stars">⭐⭐⭐⭐⭐</span>
-                            <span class="score">4.8</span>
-                        </div>
-                    </div>
-                </div>
-
+    <main class="main-content">
+        <div class="container">
+            <h1 id="main-title">الألعاب المتاحة</h1>
+            
+            <div class="games-grid" id="games-grid">
+                <!-- Games will be inserted here by JavaScript -->
             </div>
-        </section>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Games Zone. جميع الحقوق محفوظة.</p>
-        </div>
+    <footer class="footer">
+        <p id="footer-text">&copy; 2026 Games Zone. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script src="script.js"></script>
