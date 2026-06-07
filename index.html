@@ -11,38 +11,57 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
+            <!-- Logo (Left) -->
             <div class="logo">
                 <i class="fas fa-gamepad"></i>
                 <span id="logo-text">Games Zone</span>
             </div>
 
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="ابحث عن لعبة..." class="search-input">
-                <button class="search-btn"><i class="fas fa-search"></i></button>
-            </div>
+            <!-- Right Actions -->
+            <div class="header-right">
+                <!-- Search Button -->
+                <button class="search-toggle-btn" id="search-toggle">
+                    <i class="fas fa-search"></i>
+                </button>
 
-            <div class="header-actions">
+                <!-- Language Toggle -->
                 <button class="lang-toggle" id="lang-btn">
                     <span id="lang-text">EN</span>
                 </button>
-                
-                <a href="https://www.tiktok.com" target="_blank" class="tiktok-btn">
-                    <i class="fab fa-tiktok"></i>
-                </a>
 
+                <!-- Menu Hamburger -->
                 <button class="menu-toggle" id="menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
+            </div>
+        </div>
+
+        <!-- Search Bar (Hidden by default) -->
+        <div class="search-bar-container" id="search-bar-container">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="ابحث عن لعبة..." class="search-input">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
             </div>
         </div>
     </header>
 
     <!-- Mobile Menu -->
     <nav class="mobile-menu" id="mobile-menu">
-        <ul>
-            <li><a href="#home" id="home-link">الرئيسية</a></li>
-            <li><a href="#about" id="about-link">حول</a></li>
-        </ul>
+        <div class="menu-items">
+            <a href="#home" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span id="home-link">الرئيسية</span>
+            </a>
+            <a href="#about" class="menu-item">
+                <i class="fas fa-info-circle"></i>
+                <span id="about-link">حول</span>
+            </a>
+        </div>
+        <div class="menu-footer">
+            <a href="https://www.tiktok.com" target="_blank" class="tiktok-menu">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
     </nav>
 
     <!-- Main Content -->
